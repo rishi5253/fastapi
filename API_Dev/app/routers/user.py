@@ -32,7 +32,17 @@ def create_users(user: schema.Create_User,db:Session = Depends(get_db)):
     
     return new_user
     
+'''1
+"email":"raja@gmail.com"
+"password" : "raja"
+2
+"email":"ra@gmail.com"
+"password" : "ra"
 
+3
+"email":"ja@gmail.com"
+"password" : "ja"
+'''
 
 @router.get("/{id}",response_model=schema.fetch_id)
 def get_user (id : int ,db:Session = Depends(get_db) ):
